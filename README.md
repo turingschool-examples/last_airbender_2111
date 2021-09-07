@@ -1,24 +1,26 @@
-# README
+# The Last Airbender
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Background
 
-Things you may want to cover:
+The Last Airbender is an animated series that ran from 2005 to 2008. Some people can manipulate classical elements (wind, water, fire, earth) with psychokinetic variants of the Chinese martial arts known as "bending". One individual, the Avatar, is capable of bending all four elements and is responsible for maintaining harmony between the world's four nations.
 
-* Ruby version
+The four nations are: the "Water Tribes", the "Earth Kingdom", the "Fire Nation", and the "Air Nomads".
 
-* System dependencies
+You *DO NOT* need to have watched this series to complete this assessment. 
 
-* Configuration
+### Instructions
 
-* Database creation
+Using an Airbender API provided to you by your instructors, retrieve a sampling of characters for a given Nation, and display the relevant information per the instructions from your instructor.
 
-* Database initialization
+### Versions
 
-* How to run the test suite
+Rails 5.2.6
 
-* Services (job queues, cache servers, search engines, etc.)
+Ruby 2.7.2
 
-* Deployment instructions
+### Setup
 
-* ...
+- Fork and clone this repo
+- `bundle install`
+- `rails db:{create,migrate}`
+- `rails s`
