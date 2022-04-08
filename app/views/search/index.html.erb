@@ -1,8 +1,8 @@
 <h1> <%= params[:nation]%></h1>
 
+<% #binding.pry%>
 <ol>
   <% @nation.each do |char|%>
-  <% #binding.pry%>
   <li><%= char[:name] %></li>
   <%end %>
 
