@@ -11,7 +11,15 @@ require 'rails_helper'
 # - Any affiliations that the member has
 
 RSpec.describe 'the search page' do
-  it "text" do
+  it "has a total num of people in the fire nation" do
+    visit root_path
+    select 'Fire Nation', from: :nation
+    click_button 'Search For Members'
+
+    
+  end
+
+  it "has each member's name, photo, allies, enemies, and affiliations" do
 
   end
 end
