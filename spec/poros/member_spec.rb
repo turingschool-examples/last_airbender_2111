@@ -9,14 +9,14 @@ RSpec.describe Member do
       enemies: ["enemy"],
       affiliations: "Navy",
     }
-    @nation = Member.new(data)
+    @member = Member.new(data)
 
-    expect(@nation).to be_an_instance_of(Member)
-    expect(@nation.id).to eq("1")
-    expect(@nation.name).to eq("ang")
-    expect(@nation.photo).to eq("member_photo.jpeg")
-    expect(@nation.allies).to eq(["friend"])
-    expect(@nation.enemies).to eq(["enemy"])
-    expect(@nation.affiliations).to eq("Navy")
+    expect(@member).to be_an_instance_of(Member)
+    expect(@member.id).to eq("1")
+    expect(@member.name).to eq("ang")
+    expect(@member.photo).to eq("member_photo.jpeg")
+    expect(@member.allies).to eq(["friend"])
+    expect(@member.enemies).to eq(["enemy"])
+    expect(@member.affiliations).to eq("Navy")
   end
 end
