@@ -1,0 +1,12 @@
+<h1> <%= params[:nation]%></h1>
+
+<ol>
+  <% @nation.each do |char|%>
+  <% #binding.pry%>
+  <li><%= char[:name] %></li>
+  <%end %>
+
+  </ol>
+
+
+<%= @nation.count %>
