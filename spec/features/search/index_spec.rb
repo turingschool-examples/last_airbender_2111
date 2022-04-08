@@ -16,10 +16,23 @@ RSpec.describe 'the search page' do
     select 'Fire Nation', from: :nation
     click_button 'Search For Members'
 
-    
+    within '#total' do
+      expect(page).to have_content('Fire Nation') #make dynamic title
+      # expect(page).to_not have_content('Air Nomads')
+
+      expect(page).to have_content("Citizen Total: 97")
+    end
   end
 
   it "has each member's name, photo, allies, enemies, and affiliations" do
+    visit root_path
+    select 'Fire Nation', from: :nation
+    click_button 'Search For Members'
 
+    within '#characters'
+      expect(page).to have_content('Name:')
+      expect(page).to have_content('Allies:')
+      expect(page).to have_content('Enemies:')
+      expect(page).to have_content('Affiliations:')
   end
 end
