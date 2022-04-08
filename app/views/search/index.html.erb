@@ -1,0 +1,7 @@
+<% @members.each do |member| %>
+  <h1><%= member.name %></h1>
+  <p>Allies: <%= member.allies %></p>
+  <p>Enemies: <%= member.enemies %></p>
+  <p>Affiliation: <%= member.affiliation %></p>
+  <p>Photo: <%= member.photo %></p>
+<% end %>
