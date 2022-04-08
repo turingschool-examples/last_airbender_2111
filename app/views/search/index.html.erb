@@ -1,0 +1,39 @@
+
+<div class="content">
+  <h1>Results</h1>
+  <div class="table-wrapper-scroll-y my-custom-scrollbar">
+    <table class="table table-bordered table-striped mb-0">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Picture</th>
+          <th scope="col">Affiliations</th>
+          <th scope="col">Allies</th>
+          <th scope="col">Enemies</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @members.each_with_index do |member, idx| %>
+        <tr>
+          <div class="<%=idx%>">
+
+            <td><%= member.name %></td>
+            <td><% if member.photo != 'No Picture' %>
+              <img src=<%= member.photo %>></td>
+              <% else %>
+              <p>No Picture</p>
+              <% end %>
+            <td><%= member.affiliation %>
+            <td><% member.allies.each do |member| %>
+              <li><%= member %>
+                <% end %>
+            <td><% member.enemies.each do |enemy| %>
+              <li><%= enemy %>
+                <% end %>
+          </div>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
