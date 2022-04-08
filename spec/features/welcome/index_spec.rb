@@ -6,9 +6,13 @@ RSpec.describe 'Landing Page' do
     visit '/'
 
     select "Fire Nation"
+
     click_button("Search For Members")
+    
     expect(current_path).to eq('/search')
-    # find(:select, from, options).find(:option, value, options).select_option
-    # select "Fire Nation", :from => "Search For Members"
+    expect(page).to have_content('Chan')
+    expect(page).to have_content("Allies:")
+    expect(page).to have_content("Enemies:")
+    expect(page).to have_content("Affiliation:")
   end
 end
