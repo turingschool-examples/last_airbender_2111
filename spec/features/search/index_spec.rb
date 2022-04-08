@@ -8,7 +8,7 @@ RSpec.describe 'Nation Search' do
   end
 
   it 'shows total number of fire nation residents' do
-    expect(page).to have_content("Total Members:")
+    expect(page).to have_content("Total Members:") #should be close to 100
   end
 
 end
