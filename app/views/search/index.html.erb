@@ -1,0 +1,16 @@
+<h1><%= @nation %></h1>
+
+<h3> There are <%= @characters.count %> members in this tribe!</h3>
+
+<h3>Info about first 25: </h3>
+
+<% @characters.first(25).each do |character| %>
+    <h4>Name: <%=character.name%></h4>
+    <%= image_tag(character.photo_url) if character.photo_url%>
+    <ul>
+        <li>Affiliation: <%= character.affiliation %></li>
+        <li>Allies: <%= character.allies.join(',') %></li>
+        <li>Enemies: <%= character.enemies.join(',') %></li>
+    </ul>
+
+<% end %>
