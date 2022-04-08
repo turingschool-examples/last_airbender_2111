@@ -9,7 +9,7 @@ class CharacterService
     end
 
     def fire_nation
-      response = connection.get
+      response = connection.get("characters")
       parse_json(response)
     end
   end
