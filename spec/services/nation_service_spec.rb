@@ -11,7 +11,7 @@ RSpec.describe NationService do
     end
     context '#get_members' do
       it "returns member data" do
-        members = NationService.get_members
+        members = NationService.get_members("Fire+Nation")
 
         expect(members.first).to be_a Member
       end
