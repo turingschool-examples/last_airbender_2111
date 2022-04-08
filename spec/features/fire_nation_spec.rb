@@ -21,6 +21,10 @@ RSpec.describe 'tbd' do
     click_on "Search For Members"
 
     expect(current_path).to eq("/search")
-
+    expect(page).to have_content("Total Characters: ")
+    # expect(page).to have_content("Name: ")
+    # expect(page).to have_content("Allies: ")
+    # expect(page).to have_content("Enemies: "")
+    # expect(page).to have_content("Affiliation: ")
   end
 end

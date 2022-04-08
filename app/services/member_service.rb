@@ -11,6 +11,7 @@ class MemberService
     end
 
     def parse_data(response)
+      # require "pry"; binding.pry
       JSON.parse(response.body, symbolize_names: true)
     end
   end
