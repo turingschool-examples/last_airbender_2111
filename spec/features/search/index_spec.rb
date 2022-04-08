@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe 'Search Page' do
   before(:each) do
     visit root_path
-    #save_and_open_page
     select "Fire Nation"
     click_on "Search For Members"
   end
