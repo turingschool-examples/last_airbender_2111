@@ -1,0 +1,5 @@
+Total Characters: <%= @members.count %>
+
+<% @members[0..24].each do |member| %>
+Name: <%= member.name %>
+<% end %>
