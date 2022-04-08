@@ -12,6 +12,9 @@ RSpec.describe 'Index' do
         click_on "Search For Members"
 
         expect(page).to have_content("Chan (Fire Nation admiral)")
+        expect(page).to have_content("Ozai")
+        expect(page).to have_content("Earth Kingdom")
+
       end
     end
   end
