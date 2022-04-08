@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://last-airbender-api.herokuapp.com/api/v1/characters/5cf5679a915ecad153ab68cc?perPage
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.7.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '394'
+      Etag:
+      - W/"18a-JUUfN6FzSi0Oe05XjWvETB44/60"
+      Date:
+      - Fri, 08 Apr 2022 16:57:19 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"allies":["Fire Nation"],"enemies":["Aang"],"_id":"5cf5679a915ecad153ab68cc","photoUrl":"https://vignette.wikia.nocookie.net/avatar/images/2/24/Afiko.png/revision/latest?cb=20121121024128","name":"Afiko","gender":"Male","hair":"Brown","weapon":"Air","profession":"Monk","position":"
+        Airbending master Traitor","affiliation":"Fire Nation","first":"Avatar: The
+        Last Airbender Trading Card Game"}'
+  recorded_at: Fri, 08 Apr 2022 16:57:19 GMT
+recorded_with: VCR 6.1.0
