@@ -1,0 +1,34 @@
+<section id="total">
+  <h1> Fire Nation </h1>
+  <h2> Citizen Total: <%= @total_chars %> </h2>
+</section>
+
+<section id="characters">
+  <% @nations_chars.each do |char| %>
+    <h3> Name: <%= char.name %> </h3>
+
+    <% if char.photo != nil %>
+      <p> <img src="<%=char.photo%>"</p>
+    <% end %>
+
+    <% if char.allies.empty? %>
+      <p> Allies: None </p>
+    <% else %>
+      <p> Allies: </p>
+      <% char.allies.each do |ally| %>
+        <li> <%= ally %> </li>
+      <% end %>
+    <% end %>
+
+    <% if char.enemies.empty? %>
+      <p> Enemies: None </p>
+    <% else %>
+      <p> Enemies: </p>
+      <% char.enemies.each do |enemy| %>
+        <li> <%= enemy %> </li>
+      <% end %>
+    <% end %>
+
+    <p> Affiliations: <%= char.affiliations %> </p>
+  <% end %>
+</section>
