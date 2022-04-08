@@ -1,0 +1,12 @@
+<p>Number of Members <%= @members.count %></p>
+
+
+<% @members.each do |member| %>
+  <ul class="member" %>
+    <p class="name"><%= member[:name] %></p>
+    <p class="photo"><img src="<%= member[:photoUrl] %>"></img</p>
+    <p class="enemies"><%= member[:enemies] %></p>
+    <p class="allies"><%= member[:allies] %></p>
+    <p class="affiliation"><%= member[:affiliation] %></p>
+  </ul>
+<% end %>
