@@ -1,0 +1,60 @@
+<h1>Members</h1>
+
+Total Members: <%= @members.count %>
+
+<div id="main_characters">
+  <h3>Main Characters</h3>
+  <% @main_characters.each do |character| %>
+  <ul>
+    <li>Name: <%= character.name %></li>
+    <% if character.photo_url != nil %>
+      <li><img class="card-img-top" src=<%= character.photo_url %>></li>
+    <% end  %>
+    <% if character.affiliation != nil %>
+      <li>Affilition: <%= character.affiliation %></li>
+    <% end %>
+    <% if character.allies.count > 0 %>
+      <li>Allies: <%= character.allies %></li>
+    <% end %>
+    <% if character.enemies.count > 0 %>
+      <li>Enemies: <%= character.enemies %></li>
+    <% end %>
+    <% if character.gender != nil %>
+      <li>Gender: <%= character.gender %></li>
+    <% end %>
+    <% if character.hair != nil %>
+      <li>Hair: <%= character.hair %></li>
+    <% end %>
+    <% if character.love != nil %>
+      <li>Love: <%= character.love %></li>
+    <% end %>
+    <% if character.weapon != nil%>
+      <li>Weapon: <%= character.weapon %></li>
+    <% end %>
+    <% if character.profession != nil %>
+      <li>Profession: <%= character.profession %></li>
+    <% end %>
+    <% if character.position != nil %>
+      <li>Postion: <%= character.position %></li>
+    <% end %>
+  </ul>
+  <% end %>
+</div>
+
+<div id="all_characters">
+  <h3>All Characters</h3>
+  <% @members.each do |member| %>
+  <ul>
+    <li>Name: <%= member.name %></li>
+    <% if member.allies.count > 0 %>
+      <li>Allies: <%= member.allies %> </li>
+    <% end %>
+    <% if member.enemies.count > 0 %>
+      <li>Enemies: <%= member.enemies %></li>
+    <% end %>
+    <% if member.affiliation != nil %>
+      <li>Affiliations: <%= member.affiliation %> </li>
+    <% end %>
+  </ul>
+  <% end %>
+</div>
