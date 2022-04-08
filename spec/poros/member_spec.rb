@@ -16,8 +16,8 @@ RSpec.describe Member do
     expect(member).to be_a Member
     expect(member.name).to eq("Chan (Fire Nation admiral)")
     expect(member.affiliation).to eq("Fire Nation Navy")
-    expect(member.photo).to eq('Not Avaliable')
-    expect(member.allies).to eq("Ozai")
-    expect(member.enemies).to eq("Earth Kingdom")
+    expect(member.photo).to be_nil
+    expect(member.allies).to eq(["Ozai"])
+    expect(member.enemies).to eq(["Earth Kingdom"])
   end
 end
