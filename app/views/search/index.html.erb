@@ -1,0 +1,11 @@
+<h1><%= @nation %>'s Members</h1>
+Total Members: <%= @nation_members_count %>
+<div class="members_index">
+  <% @nation_members_20.each do |member| %>
+  <%= member.name %>
+  <%= member.affiliation %>
+  <%= member.photo %>
+  <%= member.allies %>
+  <%= member.enemies %>
+  <% end %>
+</div>
