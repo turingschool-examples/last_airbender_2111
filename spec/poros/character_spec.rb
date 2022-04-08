@@ -9,7 +9,6 @@ RSpec.describe 'Character PORO' do
             affiliation: "e",
             allies: ["quiche"],
             enemies: ["broccoli"],
-            photoUrl: "soup.com"
 
         }
 
@@ -19,6 +18,5 @@ RSpec.describe 'Character PORO' do
         expect(test.affiliation).to eq(data[:affiliation])
         expect(test.allies).to eq(data[:allies])
         expect(test.enemies).to eq(data[:enemies])
-        expect(test.photo_url).to eq(data[:photoUrl])
     end 
 end 
