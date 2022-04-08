@@ -9,7 +9,7 @@ RSpec.describe 'Airbender Member Search Index page' do
       click_button 'Search For Members'
 
       expect(current_path).to eq(search_path)
-
+save_and_open_page
       expect(page).to have_content("fire_nation")
       expect(page).to have_content(fire_nation_members.count)
 
