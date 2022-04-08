@@ -10,9 +10,9 @@ RSpec.describe AirbenderFacade do
         expect(affiliation).to be_a(Array)
 
 
-        # affiliation.each do |data|
-        #   expect(data).to be_an_instance_of(Airbender)
-        # end
+        affiliation.each do |data|
+          expect(data).to be_an_instance_of(Airbender)
+        end
       end
     end
   end
