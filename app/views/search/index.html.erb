@@ -1,23 +1,23 @@
 <h1>Total population: <%= @members.count %></h1>
 <% @members.first(25).each_with_index do |member, index| %>
-<div class=<%=member[:name]%>>
+<div class=<%=member.name%>>
 
-  <p>name: <%= member[:name] %></p>
-  <% if member[:photoUrl] %>
-    <img src=<%="#{member[:photoUrl]}"%> width="250">
+  <p>name: <%= member.name %></p>
+  <% if member.photo %>
+    <img src=<%="#{member.photo}"%> width="250">
   <% end %>
 
-  <% if member[:allies].count == 0  %>
+  <% if member.allies.count == 0  %>
     <p>allies: NONE</p>
   <% else %>
-    <p>allies: <%= member[:allies] %></p>
+    <p>allies: <%= member.allies %></p>
   <% end %>
 
-  <% if member[:enemies].count == 0 %>
+  <% if member.enemies.count == 0 %>
     <p>enemies: NONE</p>
   <% else %>
-    <p>enemies: <%= member[:enemies] %></p>
+    <p>enemies: <%= member.enemies %></p>
   <% end %>
-  <p>affiliation:  <%= member[:affiliation] %></p>
+  <p>affiliation:  <%= member.affiliation %></p>
 </div>
 <% end %>
