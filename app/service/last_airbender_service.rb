@@ -1,7 +1,9 @@
 class LastAirbenderService
   class << self
     def affiliation(nation)
-      response = conn.get("/Api/V1/characters?affiliation=nation&perPage=500")
+      #binding.pry
+      nation = nation.gsub("_", "+")
+      response = conn.get("/Api/V1/characters?affiliation=#{nation}&perPage=500")
       parsed = parse_data(response)
       #binding.pry
     end
