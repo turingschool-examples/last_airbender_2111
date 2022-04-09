@@ -1,6 +1,3 @@
-# require './app/facades/member_facade.rb'
-# require 'faraday'
-
 class SearchController < ApplicationController
   def index
     nation = params[:nation].gsub("_", "+")
