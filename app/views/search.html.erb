@@ -1,0 +1,13 @@
+<h1><%= @nation.titleize %></h1>
+<h2><%= @count %> members</h2>
+<br>
+
+<% @members.each do |member| %>
+  <div id=<%= member.name.downcase %>>
+    <h3><%= member.name %></h3>
+    <p><%= member.affiliation %></p>
+    <%= image_tag(member.photourl, height: 100, alt: member.name) if member.photourl %>
+    <li>Allies: <%= member.allies %></li>
+    <li>Enemies: <%= member.enemies %></li>
+  </div>
+<% end %>
