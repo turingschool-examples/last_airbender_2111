@@ -1,24 +1,24 @@
 <h1> <%= params[:nation]%></h1>
 Total number of fire nation members: <%= @nation.count %>
 
-<% #binding.pry%>
 <ol>
   <% @nation.each do |char|%>
-  <li><%= char[:name] %><br>
-    <img src=<%=char[:photoUrl]%>width="100px" height="100px">
+  <% #binding.pry%>
+  <li><%= char.name %><br>
+    <img src=<%=char.photoUrl%>width="100px" height="100px">
     Allies:
-    <%if char[:allies].count == 0%>
+    <%if char.allies.count == 0%>
       <%= "none"%>
     <%else%>
-      <%char[:allies].each do |name|%>
+      <%char.allies.each do |name|%>
       <%= name%>
       <%end%><br>
 
     Enemies:
-    <%if char[:enemies].count == 0%>
+    <%if char.enemies.count == 0%>
       <%= "none"%>
     <%else%>
-      <%char[:enemies].each do |name|%> <%= name%> <%end%>
+      <%char.enemies.each do |name|%> <%= name%> <%end%>
 
     <%end%>
     <%end%>
