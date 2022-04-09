@@ -1,24 +1,23 @@
 require 'rails_helper'
 
-  RSpec.describe LastService do
+  RSpec.describe LastAirbenderService do
 
     it "call on the service" do
-      nation = "fire_nation"
-      response = LastService.affiliation(nation)
+      nation = "fire+nation"
+      response = LastAirbenderService.affiliation(nation)
       expect(response).to be_a(Array)
-      expect(response.count).to eq(112)
+      expect(response.count).to eq(97)
     end
 
     it "has attributes" do
-      nation = "fire_nation"
-      response = LastService.affiliation(nation)
-      expect(response[3]).to be_a(Hash)
-      expect(response[3]).to have_key(:name)
-      expect(response[3]).to have_key(:allies)
-      expect(response[3]).to have_key(:enemies)
-      expect(response[3]).to have_key(:photoUrl)
-      expect(response[3]).to have_key(:affiliation)
-      expect(response[3]).to have_key(:_id)
-      #binding.pry
+      nation = "fire+nation"
+      response = LastAirbenderService.affiliation(nation)
+      expect(response[2]).to be_a(Hash)
+      expect(response[2]).to have_key(:name)
+      expect(response[2]).to have_key(:allies)
+      expect(response[2]).to have_key(:enemies)
+      expect(response[2]).to have_key(:photoUrl)
+      expect(response[2]).to have_key(:affiliation)
+      expect(response[2]).to have_key(:_id)
     end
   end
