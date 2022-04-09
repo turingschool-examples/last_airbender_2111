@@ -2,7 +2,7 @@ class SearchFacade
   class << self
 
     def get_nation(nation)
-      nation_data = LastAirbenderService.affiliation(nation)
+      nation_data = LastAirbenderService.affiliation(nation).first(25)
       nation = poro_maker(nation_data)
     end
 
