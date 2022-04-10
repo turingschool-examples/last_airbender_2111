@@ -1,5 +1,6 @@
 class SearchController < ApplicationController
   def index
-    CharacterFacade.find_characters(params[:nation])
+    @characters = CharacterFacade.find_characters(params[:nation])
+    @nation = params[:nation]
   end
 end
