@@ -3,7 +3,8 @@ class Character
               :name,
               :allies,
               :enemies,
-              :affiliation
+              :affiliation,
+              :photoUrl
 
   def initialize(result)
     @id = result[:_id]
@@ -11,5 +12,6 @@ class Character
     @allies = result[:allies]
     @enemies = result[:enemies]
     @affiliation = result[:affiliation]
+    @photoUrl = result[:photoUrl]
   end
 end
