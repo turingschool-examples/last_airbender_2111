@@ -2,12 +2,13 @@
   <h1> <%= @nation.titleize %> </h1>
 </div>
 Member count: <%= @characters.count %>
-
+<div id="details">
   <ul><% @characters.each do |c| %>
     <li><b><%=c.name%></b></li>
     <img src="<%= c.photoUrl %>"></img><p>
-      <b>Allies:</b><ol><%= c.allies %></ol>
-      <b>Enemies:</b><ol> <%= c.enemies %></ol>
+      <b>Allies:</b><ol><%= c.allies.join(', ') %></ol>
+      <b>Enemies:</b><ol> <%= c.enemies.join(', ') %></ol>
       <b>Affiliations:</b> <%= c.affiliation %><p>
       <% end %>
     </ul>
+</div>
