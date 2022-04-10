@@ -14,4 +14,20 @@ class Character
     @affiliation = result[:affiliation]
     @photoUrl = result[:photoUrl]
   end
+
+  def allie_linter
+    if @allies.count == 0
+      'NONE'
+    else
+      @allies.join(', ')
+    end
+  end
+
+  def enemy_linter
+    if @enemies.count == 0
+      'NONE'
+    else
+      @enemies.join(', ')
+    end
+  end
 end
