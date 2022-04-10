@@ -1,1 +1,10 @@
-<h1> <%= @nation.name %> </h1>
+<h1> Total Members </h1>
+<% @characters.first(25).each do |character| %>
+  <ul>
+    <%= character.name %>
+    <img src="<%= character.photoUrl %>"></img>
+    <p> Enemies: <%= character.enemies %></p>
+    <p> Allies: <%= character.allies %></p>
+    <p> Affiliation: <%= character.affiliation %></p>
+  </ul>
+<% end %>
