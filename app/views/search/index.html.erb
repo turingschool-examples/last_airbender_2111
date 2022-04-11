@@ -1,0 +1,16 @@
+<h3>Total Characters: <%= @characters.count %></h3>
+
+<% @characters.first(25).each do |character| %>
+  <ul class="character" %>
+    <p class="name">Name: <%= character.name %></p>
+    <p class="photo"><img src="<%= character.photoUrl %>"></img</p>
+    <p class="enemies">Enemies: <br><% character.enemies.each do |enemy| %>
+                          <%= enemy %><br></p>
+                        <% end %>
+    <p class="allies">Allies: <br><% character.allies.each do |ally| %>
+                        <%= ally %><br></p>
+                      <% end %>
+    <p class="affiliation">Affiliation: <%= character.affiliation %></p>
+    <hr>
+  </ul>
+<% end %>
